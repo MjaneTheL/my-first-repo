@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #670b74;
 }
 
 section {
@@ -14,15 +14,15 @@ section {
 }
 
 #hero {
-    background-color: #670b74;
+    background-color: #7e3288;
     color: white;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 4px solid white;
+    border: 4px solid rgb(88, 12, 72);
     margin-bottom: 20px;
 }
 
@@ -37,4 +37,53 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    position: sticky; /* Keeps it at the top when you scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6B8E23; /* Muted green accent on hover */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
