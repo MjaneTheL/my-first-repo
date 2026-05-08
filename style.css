@@ -140,11 +140,11 @@ body {
     margin: 0 auto 100px;
     /* 1. The Background and Shape */
     background: rgba(21, 5, 45, 0.6);
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 40px;
     
     /* 2. The "Box Around" Border */
-    border: 2px solid var(--primary-purple);
+    border: 5px solid var(--primary-purple);
     
     /* 3. The Glow Effect */
     box-shadow: 0 0 15px rgba(157, 78, 221, 0.4), inset 0 0 10px rgba(157, 78, 221, 0.2);
