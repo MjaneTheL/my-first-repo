@@ -3,60 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Mary Jane | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-    <div class="nav-container">
-        <a href="#" class="logo">MyPortfolio</a>
-        <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-    <section id="hero">
-        <img src="me.jpg" alt="Mary Jane" class="profile-pic">
-        <h1>Hi, I'm Mary Jane Encaja</h1>
-        <p>BSIT Student | Aspiring Developer</p>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a second-year IT student most passionate about logic, loves</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Hotel Reservation System</h3>
-                <p>A PHP-based system using OOP principles to manage book rentals and late fees.</p>
-                <span>Tech: PHP, SQL</span>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">MJ<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--HERO-->
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <img src="me.jpg" alt="Mary Jane" class="profile-pic">
+            <h1>Hi, I'm <span class="highlight">Mary Jane Encaja</span></h1>
+            <p class="tagline">BSIT Student | Aspiring Software Developer</p>
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </header>
+
+    <main>
+        <!--ABOUTME-->
+        <section id="about" class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>I am a second-year IT student at Cavite State University. I am passionate about logic and software development, with experience in Java, PHP, and Open-Source Technologies.</p>
+        </section>
+
+        <!--PROJECTS-->
+        <section id="projects" class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Hotel Reservation System</h3>
+                    <p>A PHP-based system utilizing Object-Oriented Programming to manage bookings and rentals.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Bill 'N Care</h3>
+                    <p>A utility billing prototype designed to manage electricity, water, and internet consumption.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">GUI</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Bash Automation Script</h3>
+                    <p>A shell script created to automate folder structures and file management for Linux environments.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Linux</span>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Utility Billing System</h3>
-                <p>A prototype named Bill 'N Care designed to manage internet, electricity and water consumption.</p>
-                <span>Tech: Java, GUI</span>
-            </div>
-            <div class="project-card">
-                <h3>Bash Automation Script</h3>
-                <p>A shell script created to automate folder structures and file management.</p>
-                <span>Tech: Bash, Linux</span>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p>Let's connect!</p>
+            <div class="contact-links">
+                <a href="mailto:maryjaneencaja53@gmail.com">Email Me</a>
+                <a href="https://github.com/MjaneTheL" target="_blank">GitHub Profile</a>
             </div>
         </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Let's connect!</p>
-        <ul>
-            <li>Email: <a href="mailto:maryjaneencaja53@gmail.com">maryjaneencaja53@gmail.com</a></li>
-            <li>GitHub: <a href="https://github.com/MjaneTheL">github.com/MjaneTheL</a></li>
-        </ul>
-    </section>
+    </footer>
 
 </body>
 </html>
