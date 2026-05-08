@@ -1,10 +1,15 @@
-.hero-text h1 {
-    font-size: 5rem;
-    font-weight: 800;
-    letter-spacing: -2px;
+/* 1. Theme Variables & Reset */
+:root {
+    --bg-dark: #0a0118; /* Deep Space Purple */
+    --bg-card: #15052d; 
+    --primary-purple: #9d4edd; /* Neon Purple */
+    --secondary-purple: #aa60e2; /* Light Violet */
+    --text-main: #ffffff;
+    --text-dim: #b1a7c1;
+    --glow-shadow: 0 0 20px rgba(157, 78, 221, 0.6);
 }
-.glow-text {
-    font-size: 5.5rem;
+.hero h1 {
+    font-size: 5rem;
 }
 
 * {
