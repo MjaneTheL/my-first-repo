@@ -153,25 +153,21 @@ body {
 }
 
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.projects-container {
+    display: flex;
+    justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
-.project-card {
-    background: var(--bg-card);
+.project-box {
+    width: 300px;
     padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: 0.3s ease;
-    position: relative;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-purple);
-    box-shadow: 0 10px 20px rgba(157, 78, 221, 0.2);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffffff22;
+    color: white;
 }
 
 /* 5. Tech Tags & Buttons */
