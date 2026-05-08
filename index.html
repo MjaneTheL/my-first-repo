@@ -3,19 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My-Project-Portfolio</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-    <h1>Hi!, I'm Mary Jane Encaja</h1>
-    <p>BSIT Student & Aspiring Developer</p>
-</section>
 
-<section>
-    <h2>About Me</h2>
-    <p>I study at Cavite State University-Imus Campus.</p>
-    <p>I love Reading, and Gaming!</p>
-    <img src="me.jpg" alt="Profile Photo">
-</section>
+    <section id="hero">
+        <img src="me.jpg" alt="Mary Jane" class="profile-pic">
+        <h1>Hi, I'm Mary Jane Encaja</h1>
+        <p>BSIT Student | Aspiring Developer</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a second-year IT student most passionate about logic, loves</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Hotel Reservation System</h3>
+                <p>A PHP-based system using OOP principles to manage book rentals and late fees.</p>
+                <span>Tech: PHP, SQL</span>
+            </div>
+            <div class="project-card">
+                <h3>Utility Billing System</h3>
+                <p>A prototype named Bill 'N Care designed to manage internet, electricity and water consumption.</p>
+                <span>Tech: Java, GUI</span>
+            </div>
+            <div class="project-card">
+                <h3>Bash Automation Script</h3>
+                <p>A shell script created to automate folder structures and file management.</p>
+                <span>Tech: Bash, Linux</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Let's connect!</p>
+        <ul>
+            <li>Email: <a href="mailto:maryjaneencaja53@gmail.com">maryjaneencaja53@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/MjaneTheL">github.com/MjaneTheL</a></li>
+        </ul>
+    </section>
+
 </body>
 </html>
