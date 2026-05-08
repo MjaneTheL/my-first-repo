@@ -148,26 +148,32 @@ body {
     font-size: 24px;
     line-height: 1.8;
     color: white;
+
     text-align: justify;
 }
 }
 
 
-.projects-container {
-    display: flex;
+.project-grid {
+    display: grid;
     justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 50px;
 }
 
-.project-box {
-    width: 300px;
+.project-card {
+    background: var(--bg-card);
     padding: 30px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid #ffffff22;
-    color: white;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-purple);
+    box-shadow: 0 10px 20px rgba(157, 78, 221, 0.2);
 }
 
 /* 5. Tech Tags & Buttons */
