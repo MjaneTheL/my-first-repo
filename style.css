@@ -1,31 +1,98 @@
-/* 1. Theme Variables */
+/* 1. Theme Variables & Reset */
 :root {
     --bg-dark: #0a0118; /* Deep Space Purple */
     --bg-card: #15052d; 
     --primary-purple: #9d4edd; /* Neon Purple */
-    --secondary-purple: #c77dff; /* Light Violet */
+    --secondary-purple: #aa60e2; /* Light Violet */
+    --text-main: #ffffff;
+    --text-dim: #b1a7c1;
     --glow-shadow: 0 0 20px rgba(157, 78, 221, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--bg-dark);
-    color: white;
+    color: var(--text-main);
     font-family: 'Inter', sans-serif;
+    line-height: 1.6;
 }
 
-/* 2. Hero Layout */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* 2. Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 1, 24, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(157, 78, 221, 0.2);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.logo span { color: var(--primary-purple); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--primary-purple); }
+
+/* 3. Hero Section (Neon Glow Aesthetic) */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top right, #1e0a3d, #0a0118);
+}
+
 .hero-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    padding: 0 10%;
-}
-
-.hero-text h1 {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin: 10px 0;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
 }
 
 .glow-text {
@@ -33,21 +100,14 @@ body {
     text-shadow: 0 0 15px var(--primary-purple);
 }
 
-.description {
-    color: #b1a7c1;
-    max-width: 500px;
-    margin: 20px 0;
-}
-
-/* 3. The Neon Circle Image */
 .image-border {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--primary-purple), #3c096c);
-    padding: 8px; /* The "glow" thickness */
-    box-shadow: 0 0 40px var(--primary-purple);
+    padding: 6px;
+    box-shadow: 0 0 30px var(--primary-purple);
 }
 
 .profile-img {
@@ -58,14 +118,72 @@ body {
     background: var(--bg-dark);
 }
 
-/* 4. Buttons */
+/* 4. About Me & Project Organization */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-card {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    box-shadow: var(--glow-shadow);
+    max-width: 800px;
+    margin: 0 auto 100px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-purple);
+    box-shadow: 0 10px 20px rgba(157, 78, 221, 0.2);
+}
+
+/* 5. Tech Tags & Buttons */
+.tech-stack {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(157, 78, 221, 0.1);
+    color: var(--secondary-purple);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid var(--primary-purple);
+    font-weight: bold;
+}
+
 .btn {
+    display: inline-block;
     padding: 12px 30px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin-right: 15px;
     transition: 0.3s;
+    margin-top: 20px;
 }
 
 .btn-glow {
@@ -77,22 +195,15 @@ body {
 .btn-outline {
     border: 2px solid var(--primary-purple);
     color: var(--primary-purple);
+    margin-left: 15px;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-}
-
-/* 5. Responsive Adjustment */
+/* 6. Responsive Design */
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
-        padding-top: 100px;
     }
-    .image-border {
-        width: 250px;
-        height: 250px;
-    }
+    .hero-text h1 { font-size: 2.5rem; }
+    .image-border { width: 200px; height: 200px; margin-bottom: 30px; }
 }
