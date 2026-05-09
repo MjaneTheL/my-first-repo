@@ -85,7 +85,13 @@ body {
     justify-content: center;
     background: radial-gradient(circle at top right, #1e0a3d, #0a0118);
 }
-
+.hero-text h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1; 
+    margin-bottom: 15px;
+    text-transform: none; 
+}
 .hero-container {
     display: flex;
     align-items: center;
@@ -97,7 +103,7 @@ body {
 
 .glow-text {
     color: var(--primary-purple);
-    text-shadow: 0 0 15px var(--primary-purple);
+    text-shadow: 0 0 20px var(--primary-purple);
 }
 
 .image-border {
